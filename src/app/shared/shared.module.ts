@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopComponent } from './top/top.component';
+import { PrimengModule } from '../primeng/primeng.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +11,9 @@ import { TopComponent } from './top/top.component';
     TopComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimengModule,
+    FormsModule
   ],
   exports:[
     TopComponent

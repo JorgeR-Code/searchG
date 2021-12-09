@@ -1,1 +1,10 @@
-<p>top works!</p>
+<div class="card">
+  <div class="card-container flex align-items-center justify-content-end">
+    <p-selectButton [options]="stateOptions" [(ngModel)]="obscuro" optionLabel="label" optionValue="value" (onOptionClick)="changeTheme($event)">
+      <ng-template let-item>
+        <i [class]="item.icon"></i>
+    </ng-template>
+    </p-selectButton>
+  </div>
+</div>
+
