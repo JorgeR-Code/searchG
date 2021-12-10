@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {SelectButtonModule} from 'primeng/selectbutton';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -9,7 +11,9 @@ import {SelectButtonModule} from 'primeng/selectbutton';
     CommonModule,
   ],
   exports:[
-    SelectButtonModule
+    SelectButtonModule,
+    InputTextModule,
+    ButtonModule
   ]
 })
 export class PrimengModule { }

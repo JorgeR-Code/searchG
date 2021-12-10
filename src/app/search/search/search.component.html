@@ -1,1 +1,21 @@
-<p>search works!</p>
+<div class="container1">
+  <div class="container2">
+    <div class="imgBack">
+      <app-top></app-top>
+      <div class="flexx flex flex-wrap">
+        <span class="p-input-icon-left min-w-12 md:w-4 lg:w-4">
+          <i class="pi pi-search"></i>
+          <input  #usuario type="text" pInputText placeholder="Search" class="w-12 min-w-min" [(ngModel)]="value3" (keydown.enter)="valorBusqueda(usuario.value)"/>
+      </span>
+      <p-button type="button" icon="pi pi-search" label="Buscar" styleClass="p-button-raised p-button-secondary ml-2" (onClick)="valorBusqueda(usuario.value)"></p-button>
+
+      </div>
+      <div class="flex justify-content-center align-items-end">
+        <div class="githubCircle">
+          <img src="../../../assets/images/gh.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
