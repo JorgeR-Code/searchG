@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceGHService } from 'src/app/services/service-gh.service';
 import { switchMap, tap } from "rxjs/operators";
 import { UserGH } from 'src/app/interfaces/user.interface';
@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   user!: UserGH;
 
-  constructor(private activateRoute: ActivatedRoute, private searchUser: ServiceGHService) { }
+  constructor(private activateRoute: ActivatedRoute, private searchUser: ServiceGHService, private _route: Router) { }
 
   ngOnInit(): void {
 
@@ -25,6 +25,10 @@ export class ProfileComponent implements OnInit {
       tap( console.log)
     )
     .subscribe(user => this.user = user);
+  }
+
+  visitar(){
+    window.location.href = this.user.html_url;
   }
 
 }

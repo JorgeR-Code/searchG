@@ -4,6 +4,8 @@ import { SearchComponent } from './search/search.component';
 import { SharedModule } from '../shared/shared.module';
 import { PrimengModule } from '../primeng/primeng.module';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     SharedModule,
     PrimengModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class SearchModule { }

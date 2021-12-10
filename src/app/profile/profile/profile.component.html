@@ -2,13 +2,27 @@
   <div class="flex justify-content-center align-content-center flex-wrap card-container blue-container w-full h-full">
     <!-- <p-progressSpinner></p-progressSpinner> -->
     <div class="grid w-full h-full">
-      <div class="flex justify-content-center align-content-center col-12 h-12rem mt-5">
+      <div class="flex  align-items-center flex-column col-12 h-20rem mt-5">
         <div class="avatar">
           <img [src]="user.avatar_url">
         </div>
+        <p class="p1">{{user.name}}</p>
+        <p class="p2">{{user.login}}</p>
+        <p-button type="button" label="Visitar en GitHub" styleClass="p-button-rounded mt-2" (onClick)="visitar()"></p-button>
       </div>
-      <div class="col-12 h-auto">
-
+      <div class="col-12 h-auto flex flex-wrap card-container align-items-center justify-content-center">
+        <div class=" flex cardInfo align-items-center flex-column shadow-8">
+          <p class="header">Repositorios públicos</p>
+          <p class="number">{{user.public_repos}}</p>
+        </div>
+        <div class=" flex cardInfo align-items-center flex-column shadow-8">
+          <p class="header">Seguidores</p>
+          <p class="number">{{user.followers}}</p>
+        </div>
+        <div class=" flex cardInfo align-items-center flex-column shadow-8">
+          <p class="header">Gists públicos</p>
+          <p class="number">{{user.public_gists}}</p>
+        </div>
       </div>
     </div>
 
