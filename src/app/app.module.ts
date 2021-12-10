@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProfileModule } from './profile/profile.module';
 import { SearchModule } from './search/search.module';
 import {RouterModule} from '@angular/router';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {RouterModule} from '@angular/router';
     ProfileModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

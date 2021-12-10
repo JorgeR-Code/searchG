@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top',
@@ -7,20 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopComponent implements OnInit {
 
+  @Output() theme = new EventEmitter;
+
   stateOptions: any[];
-  obscuro: string = "off";
+  obscuro: boolean = false;
 
   constructor() {
     this.stateOptions = [
       {
         icon: 'pi pi-sun',
         justify: 'Left',
-        value: 'off',
+        value: false,
       },
       {
         icon: 'pi pi-moon',
         justify: 'right',
-        value: 'on'
+        value: true
     }];
 
    }
@@ -29,7 +31,7 @@ export class TopComponent implements OnInit {
   }
 
   changeTheme(evento: any){
-    console.log(evento.option.value)///cambiar tema
+    this.theme.emit(evento);
   }
 
 }

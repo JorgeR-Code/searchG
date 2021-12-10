@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -14,7 +15,8 @@ import { PrimengModule } from '../primeng/primeng.module';
   ],
   imports: [
     CommonModule,
-    PrimengModule
+    PrimengModule,
+    SharedModule
   ]
 })
 export class ProfileModule { }

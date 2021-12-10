@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   value3: string = '';
+  obscuro: boolean = false;
 
   constructor(private _route: Router) { }
 
@@ -24,6 +25,10 @@ export class SearchComponent implements OnInit {
       return
     }
 
+  }
+
+  changeTheme(valor: any){
+    this.obscuro = valor.option.value;
   }
 
 }

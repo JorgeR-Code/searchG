@@ -67,5 +67,72 @@
   }
 }
 
+.theme2{
+  overflow: scroll;
+  background-color: rgb(49, 49, 49);
+  color: #fff;
+  .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 5px #fff;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  .p1{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+  }
+  .p2{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .cardInfo{
+    margin: 5px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(187, 187, 187);
+
+    .header{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .number{
+      margin: 0;
+      margin-bottom: 5px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+
+    .cardInfo{
+      width: 200px;
+      height: 100px;
+
+      .header{
+        font-size: 1rem;
+      }
+
+      .number{
+        font-size: 2rem;
+      }
+    }
+
+
+  }
+}
+
 
 

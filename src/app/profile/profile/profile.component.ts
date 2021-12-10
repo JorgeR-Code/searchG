@@ -14,6 +14,7 @@ import { UserGH } from 'src/app/interfaces/user.interface';
 export class ProfileComponent implements OnInit {
 
   user!: UserGH;
+  obscuro: boolean = false;
 
   constructor(private activateRoute: ActivatedRoute, private searchUser: ServiceGHService, private _route: Router) { }
 
@@ -21,8 +22,7 @@ export class ProfileComponent implements OnInit {
 
     this.activateRoute.params
     .pipe(
-      switchMap(({name}) =>this.searchUser.searchUser(name)),
-      tap( console.log)
+      switchMap(({name}) =>this.searchUser.searchUser(name))
     )
     .subscribe(user => this.user = user);
   }
@@ -31,4 +31,11 @@ export class ProfileComponent implements OnInit {
     window.location.href = this.user.html_url;
   }
 
+  changeTheme(valor: any){
+    this.obscuro = valor.option.value;
+  }
+
+  volver(){
+    this._route.navigateByUrl('./');
+  }
 }
