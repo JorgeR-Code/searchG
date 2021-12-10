@@ -18,8 +18,8 @@ export class SearchComponent implements OnInit {
   valorBusqueda(usuario: string){
 
     if(usuario){
-      console.log(usuario);
-      this._route.navigate(["/profile"]);
+      const valueUser = usuario;
+      this._route.navigate(['/profile', valueUser]);
     }else{
       return
     }
